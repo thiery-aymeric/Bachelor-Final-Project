@@ -1,0 +1,69 @@
+.header{
+    .connection{
+        text-align: center;
+        padding: 3rem;
+        font-size: 3em;
+        font-family: Mops;
+        font-weight: 900;
+        color:white;
+    }
+
+    position: relative;
+    background-color: #c866c6 ;
+    .siteName{
+        text-align: center;
+        padding: 1em;
+        a{
+            font-size: 3em;
+            font-family: Mops;
+            font-weight: 900;
+            color:white;
+            text-decoration: none;  
+        }
+    }
+    span{
+        color: white;
+        margin:0 auto 1em auto;
+        display: block;
+        width: fit-content;
+        cursor: pointer;       
+       
+        @media screen and (min-width:500px){
+            font-size: 1.2em;
+            position: absolute;
+            right: 1em;
+            left: auto;
+            top: 1em;
+        }
+    }
+
+    nav{
+        ul{
+            font-size: 1.2em;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7rem;
+            
+
+            @media screen and (min-width:500px){
+                gap: 15%;
+                font-size: 1.3em;
+                justify-content: center;
+                gap: 2em;
+                flex-direction: row;;
+                align-items: center;
+            }
+
+            @media screen and (min-width:1000px){
+                font-size: 1.6em;
+            }
+            a{
+                color:white;
+                text-decoration: none;
+                padding: 0.3em
+            }
+        }
+    }
+}

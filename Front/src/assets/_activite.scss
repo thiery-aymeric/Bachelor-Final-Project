@@ -1,0 +1,33 @@
+.accroche{
+    font-style: italic;
+}
+.activite-client{
+
+    .Title{
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width:500px){
+            justify-content: start;
+            padding-left: 2em;
+        }
+        svg{
+            position: relative;
+            top: 3px;
+        }
+        a{
+            color: black;
+            text-decoration: none; 
+        }
+    }
+    .adress{
+        display: flex;
+        align-items: center;
+    }
+    div{
+        h3{font-weight: 500;}
+        p{padding:0 1em;}
+    }
+}

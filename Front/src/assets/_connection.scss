@@ -1,0 +1,17 @@
+.login{
+    form{
+        padding-top:2rem ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        input{
+            padding: 1rem 2rem;
+            width: 90%;
+            max-width: 540px;
+        }
+        .submit{
+            width: 100%;
+        }
+    }
+}

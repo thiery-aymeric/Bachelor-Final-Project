@@ -1,0 +1,65 @@
+// Importation des polices Crimson Text
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('/Front/src/assets/fonts/CrimsonText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('/Front/src/assets/fonts/CrimsonText-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('/Front/src/assets/fonts/CrimsonText-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+ 
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('/Front/src/assets/fonts/CrimsonText-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('/Front/src/assets/fonts/CrimsonText-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('/Front/src/assets/fonts/CrimsonText-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  // Importation des polices Amladen Bohiga
+@font-face {
+    font-family: 'Amladen Bohiga';
+    src: url('/Front/src/assets/fonts/Amladen Bohiga DEMO VERSION.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'Amladen Bohiga';
+    src: url('/Front/src/assets/fonts/Amladen Bohiga Italic DEMO VERSION.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  // Importation de la police Mops
+@font-face {
+    font-family: 'Mops';
+    src: url('/Front/src/assets/fonts/mops.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
