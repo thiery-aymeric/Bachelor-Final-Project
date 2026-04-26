@@ -1,4 +1,4 @@
-const urlServ = import.meta.env.VITE_API;
+const urlServ = import.meta.env.VITE_API_URL;
 /** ${urlServ} */
 export async function login(profil){
     const options = { 
@@ -6,7 +6,7 @@ export async function login(profil){
         body : JSON.stringify(profil) , 
         headers: { 'Content-Type': 'application/json' }
     }
-    const reponse = await fetch(`http://localhost:1237/login`, options);
+    const reponse = await fetch(`${urlServ}/login`, options);
     const user = await reponse.json()
     return user
 }
@@ -20,19 +20,19 @@ export async function register(profil){
             'Authorization': localStorage.getItem('token')
         }
     }
-    const reponse = await fetch(`http://localhost:1237/addProfil`, options);
+    const reponse = await fetch(`${urlServ}/addProfil`, options);
     const user = await reponse.json()
     return user
 }
 
 export async function getAll(){
-    const reponse = await fetch(`http://localhost:1237/users`);
+    const reponse = await fetch(`${urlServ}/users`);
     const users = await reponse.json()
     return users 
 }
 
 export async function deleteUser(id){
-    const reponse = await fetch(`http://localhost:1237/delete-user/${id}`,
+    const reponse = await fetch(`${urlServ}/delete-user/${id}`,
         {
             headers: { 
                 'Authorization': localStorage.getItem('token')
