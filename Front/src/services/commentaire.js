@@ -1,16 +1,16 @@
 
-const urlServeur = import.meta.env.VITE_API; 
+const urlServ = import.meta.env.VITE_API_URL;
 
 
 export async function getAll(){
-    const reponse = await fetch(`http://localhost:1237/messages`);
+    const reponse = await fetch(`${urlServ}/messages`);
     const commentaires = await reponse.json()
     return commentaires 
 }
 
 
 export async function getFirstFiveOrderByDate(){
-    const reponse = await fetch(`http://localhost:1237/messages`);
+    const reponse = await fetch(`${urlServ}/messages`);
     const commentaires = await reponse.json()
     return commentaires 
 }
@@ -18,7 +18,7 @@ export async function getFirstFiveOrderByDate(){
 
 export async function getOneById( id ){
     try{
-        const reponse = await fetch(`http://localhost:1237/message/${id}`); 
+        const reponse = await fetch(`${urlServ}/message/${id}`); 
         const commentaire = await reponse.json()
         if(reponse.status !== 200){
             throw new Error(commentaire)
@@ -41,14 +41,14 @@ export async function newCommentaire(formulaire){
     }
     console.log(options.body);
 
-    const reponse = await fetch(`http://localhost:1237/add-message`, options);
+    const reponse = await fetch(`${urlServ}/add-message`, options);
     
     const commentaire = await reponse.json();
     return commentaire ; 
 }
 
 export async function deleteCommentaire(id){
-    const reponse = await fetch(`http://localhost:1237/delete-message/${id}`,
+    const reponse = await fetch(`${urlServ}/delete-message/${id}`,
         {
             headers: { 
                 'Authorization': localStorage.getItem('token')

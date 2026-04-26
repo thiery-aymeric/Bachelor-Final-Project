@@ -1,15 +1,15 @@
-const urlServeur = import.meta.env.VITE_API; 
+const urlServ = import.m
 
 
 export async function getAll(){
-    const reponse = await fetch(`http://localhost:1237/Menus`);
+    const reponse = await fetch(`${urlServ}/Menus`);
     const menus = await reponse.json()
     return menus 
 }
 
 
 export async function getFirstFiveOrderByDate(){
-    const reponse = await fetch(`http://localhost:1237/Menus`);
+    const reponse = await fetch(`${urlServ}/Menus`);
     const menus = await reponse.json()
     return menus 
 }
@@ -17,7 +17,7 @@ export async function getFirstFiveOrderByDate(){
 
 export async function getOneById( id ){
     try{
-        const reponse = await fetch(`http://localhost:1237/Menus/${id}`); 
+        const reponse = await fetch(`${urlServ}/Menus/${id}`); 
         const menu = await reponse.json()
         if(reponse.status !== 200){
             throw new Error(menu)
@@ -40,7 +40,7 @@ export async function newMenu(formulaire){
     }
     console.log(options.body);
 
-    const reponse = await fetch(`http://localhost:1237/addMenu`, options);
+    const reponse = await fetch(`${urlServ}/addMenu`, options);
     
     const menu = await reponse.json();
     return menu ; 
@@ -48,7 +48,7 @@ export async function newMenu(formulaire){
 
 
 export async function deleteMenu(id){
-    const reponse = await fetch(`http://localhost:1237/delete-menu/${id}`,
+    const reponse = await fetch(`${urlServ}/delete-menu/${id}`,
         {
             headers: { 
                 'Authorization': localStorage.getItem('token')
@@ -70,7 +70,7 @@ export async function updateMenu(formulaire , id){
         }
     }
 
-    const reponse = await fetch(`http://localhost:1237/update-menu/${id}` , options)
+    const reponse = await fetch(`${urlServ}/update-menu/${id}` , options)
     const menus = await reponse.json();
     return menus ; 
 }
