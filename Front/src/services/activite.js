@@ -1,5 +1,3 @@
-// import data from "../assets/data.json";
-
 const urlServ = import.meta.env.VITE_API_URL;
 
 

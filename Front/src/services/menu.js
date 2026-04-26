@@ -1,5 +1,4 @@
-const urlServ = import.m
-
+const urlServ = import.meta.env.VITE_API_URL;
 
 export async function getAll(){
     const reponse = await fetch(`${urlServ}/Menus`);
